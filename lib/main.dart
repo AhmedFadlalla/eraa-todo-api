@@ -27,7 +27,7 @@ void main() async {
   }else{
     widget=LoginScreen();
   }
-  runApp( MyApp(startWidget: widget,));
+  runApp( MyApp(startWidget: LoginScreen(),));
 }
 
 class MyApp extends StatelessWidget {

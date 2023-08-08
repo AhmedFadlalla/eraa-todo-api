@@ -62,7 +62,7 @@ class LoginScreen extends StatelessWidget {
                     TextFormField(
                         controller: cubit.emailController,
                         style: const TextStyle(
-                            color: Colors.black
+                            color: Colors.white
                         ),
                         decoration: InputDecoration(
                             labelText: "Email",
@@ -106,7 +106,7 @@ class LoginScreen extends StatelessWidget {
                     TextFormField(
                         controller:cubit.passwordController,
                         style: const TextStyle(
-                            color: Colors.black
+                            color: Colors.white
                         ),
                         decoration: InputDecoration(
                             labelText: "Password",
