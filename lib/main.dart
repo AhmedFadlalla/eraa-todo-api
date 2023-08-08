@@ -19,15 +19,15 @@ void main() async {
   await CachHelper.init();
   Bloc.observer = MyBlocObserver();
 
- // token=CachHelper.getData(key: SharedKeys.token);
-  token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3Rhc2tzLmVyYWFzb2Z0LmNvbS9hcGkvbG9naW4iLCJpYXQiOjE2OTAwNTQ1MDQsImV4cCI6MTY5MDA1ODEwNCwibmJmIjoxNjkwMDU0NTA0LCJqdGkiOiJHSjBPTnNjcmZFRktWZGoyIiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.FNhBLih2HWZIi8vNKZGva9WoguQ2ZyAp7MrlFaxVLtc";
+ token=CachHelper.getData(key: SharedKeys.token);
+
   Widget? widget;
   if(token!=null){
     widget=HomeScreen();
   }else{
     widget=LoginScreen();
   }
-  runApp( MyApp(startWidget: LoginScreen(),));
+  runApp( MyApp(startWidget: widget,));
 }
 
 class MyApp extends StatelessWidget {
